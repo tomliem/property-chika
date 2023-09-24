@@ -1,54 +1,45 @@
-import './footer.css';
-import { Logo } from '@app/components/Logo/Logo';
-import testIds from '@app/utils/test-ids';
+import './footer.css'
+import { Logo } from '@app/components/Logo/Logo'
+import { Whatsapp } from '@app/components/Whatsapp'
 
 const Footer = () => (
-  <footer
-    className="m-h-56 leading-7 sm:p-14 font-site"
-    data-testid={testIds.LAYOUT.FOOTER}
-  >
+  <footer className="m-h-56 leading-7 sm:p-14 font-site">
     <div className="flex flex-col sm:flex-row">
-      <div className="basis-2/3 bg-blue-site text-white p-14 sm:pl-44">
-        <h2 className="text-2xl sm:text-3xl font-bold">CONTACT US</h2>
+      <div className="basis-1/3 bg-blue-site text-white p-14 sm:pl-24">
+        <h2 className="text-2xl sm:text-3xl font-bold">Remax Solitaire</h2>
         <div className="flex flex-col sm:flex-row text-sm font-helvetica">
-          <div className="basis-1/3 border-b border-white pb-4">
+          <div className="border-b border-white pb-4">
+            <p className="mt-10 font-bold">Agen Real Estate Pilihan Indonesia</p>
             <p className="mt-10">
-              Please reach out to us with any questions or concerns. We’re happy
-              to hear from you.
+              Jl. Kelapa Nias Raya QE1/14 <br />
+              Kelapa Gading Jakarta Utara - 14240 Indonesia
             </p>
-            <p className="mt-10">Registered Charity: 12345-67</p>
-          </div>
-          <div className="basis-1/3"></div>
-          <div className="basis-1/2 border-b border-white pb-4">
-            <p className="mt-10">
-              500 Terry Francois Street
-              <br /> San Francisco, CA 94158
-            </p>
-            <p className="mt-10">Phone: 1-800-000-0000</p>
+            <p className="mt-10">Phone: +62 214 515 551</p>
+            {/* <p className="mt-10">Registered Charity: 12345-67</p> */}
           </div>
         </div>
-        <h3 className="text-4xl mt-10">info@mysite.com</h3>
+        <h3 className="text-xl lg:text-4xl mt-10">solitaire@remax.co.id</h3>
       </div>
-      <div className="basis-1/3 bg-gray-200 p-14 text-center">
-        <h2 className="text-2xl sm:text-3xl font-bold">BE THE FIRST TO KNOW</h2>
-        <p className="mt-6">Sign up to our newsletter to stay informed</p>
-        <input
-          type="email"
-          className="my-6 w-3/4 block mx-auto bg-transparent border-0 border-b border-blue-site text-blue-site"
-          placeholder="Email Address"
-        />
-        <a href="" className="text-purple-site py-6 font-site">
-          Subscribe Now
-        </a>
+      <div className="basis-2/3 bg-gray-200 p-14 text-justify hidden lg:block">
+        RE/MAX (NYSE: RMAX) hadir di Indonesia pada tahun 2014 dan memulai revolusi mental kepercayaan dalam transaksi
+        property. RE/MAX hadir di 115 negara dan wilayah dengan kekuatan jaringan lebih dari 8,300 kantor dan 135,000.
+        RE/MAX didirikan berdasarkan mimpi, di mana dalam setiap pertemuan, agennya akan memberikan layanan terbaik dan
+        mencapai hasil maksimal. Melalui mimpi ini, industri properti telah berubah selamanya. RE/MAX percaya pada
+        konsep maksimum. Ketika dikombinasikan dengan pelatihan kelas dunia dan keunggulan teknologi, itu akan menarik
+        dan menjadi alat yang kuat untuk agen (MA) dan pemilik bisnis (BO) yang sangat efisien dan sangat termotivasi
+        untuk berhasil. Pada awal pertumbuhannya, RE/MAX berkembang pesat di Amerika Serikat dan Kanada dengan pangsa
+        pasar lebih dari 40%. Selain itu, jaringan RE/MAX telah melampaui batas dan benua, dan telah diterima dan sangat
+        dipercaya di banyak negara. Sekarang RE/MAX telah tumbuh menjadi pembangkit tenaga listrik real estat global
+        dengan kehadiran di lebih dari 115 negara dan wilayah, lebih dari 8,300 kantor dan didukung oleh lebih dari
+        125.000 rekanan pemasaran tepercaya.
       </div>
     </div>
     <div className="mx-auto text-center sm:text-xs mt-6">
       <Logo />
-      <p className="font-default mb-10">
-        © 2035 ChoosEquality. Powered and secured by Wix
-      </p>
+      <p className="font-default mb-10">© 2023 Remax Solitaire.</p>
     </div>
+    <Whatsapp />
   </footer>
-);
+)
 
-export default Footer;
+export default Footer
