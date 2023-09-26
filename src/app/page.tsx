@@ -11,8 +11,8 @@ export default function Home() {
   return (
     <div className="mx-auto relative">
       <Section1 />
-      <Section2 />
       <Section3 />
+      <Section2 />
       <Section4 />
       <div className="mt-10 flex bg-[url('/sample-2.jpeg')] bg-no-repeat bg-cover relative">
         <div className="bg-opacity-70 bg-slate-500 w-full h-full absolute top-0 left-0 z-10"></div>

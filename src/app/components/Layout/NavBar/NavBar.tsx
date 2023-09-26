@@ -19,7 +19,7 @@ const StyledNavLink = ({
   className?: string
 }) => (
   <NavLink
-    className={`${className ?? ''} ${isActive ? 'text-purple-site' : 'hover:text-purple-site'}`}
+    className={`${className ?? ''} ${isActive ? 'text-primary-blue' : 'hover:text-primary-dark-blue'}`}
     {...linkProps}
   />
 )
@@ -51,7 +51,7 @@ export function NavBar() {
       >
         <ul className="flex flex-col items-center md:flex-row gap-10 md:gap-4 min-[900px]:gap-5 lg:gap-12 justify-end text-sm md:text-[15px] leading-[22px]">
           {navbarItems.map(({ ref, label }) => (
-            <li key={ref} className="relative">
+            <li key={ref} className="relative text-base font-semibold">
               <StyledNavLink
                 isActive={ref === linkRef}
                 href={ref}

@@ -1,6 +1,6 @@
 'use client'
 import Image from 'next/image'
-import BGImage from '@statics/sample-2.jpeg'
+import BGImage from '@statics/banner-master-plan.png'
 import Viewer from 'react-viewer'
 import { useState } from 'react'
 
@@ -8,7 +8,7 @@ export const Section3 = () => {
   const [visible, setVisible] = useState(false)
   return (
     <div className="text-xl mt-10">
-      <div className="text-center text-2xl font-bold">THE MASTERPLAN OF SUMMARECON CROWN GADING</div>
+      <div className="text-center text-3xl font-bold">Best Business Property in BEKASI</div>
       <div className="w-full mt-5">
         <Image src={BGImage} alt="P" className="w-full" />
 

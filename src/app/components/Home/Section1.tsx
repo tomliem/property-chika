@@ -1,8 +1,8 @@
 import Image from "next/image"
-import BGImage from '@statics/bg-image.jpeg'
+import MainBanner from '@statics/banner-utama.png'
 
 export const Section1 = () => {
   return (
-    <Image src={BGImage} alt="Logo Remax" className="w-full" />
+    <Image src={MainBanner} alt="Banner Utama" className="w-full" />
   )
 }
