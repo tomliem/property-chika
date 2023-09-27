@@ -1,9 +1,9 @@
 'use client'
 import { FaWhatsappSquare } from 'react-icons/fa'
 
+export const waUrl =
+  'https://api.whatsapp.com/send?phone=62817799425&text=Halo%21%20saya%20ingin%20informasi%20Launching%20Perdana%20Crystal%20Boulevard%20Signature%20Commercial%20Bekasi%20'
 const Whatsapp = () => {
-  const waUrl =
-    'https://api.whatsapp.com/send?phone=62817799425&text=Halo%21%20saya%20ingin%20informasi%20Launching%20Perdana%20Crystal%20Boulevard%20Signature%20Commercial%20Bekasi%20'
   return (
     <div className="fixed bottom-4 right-4 z-30">
       <a href={waUrl} className="items-center flex flex-row cursor-pointer">

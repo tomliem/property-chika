@@ -3,11 +3,9 @@ import { Section1 } from '@app/components/Home/Section1'
 import { Section2 } from '@app/components/Home/Section2'
 import { Section3 } from '@app/components/Home'
 import { Section4 } from './components/Home/Section4'
+import { waUrl } from './components/Whatsapp/Whatsapp'
 
 export default function Home() {
-  const waUrl =
-    'https://api.whatsapp.com/send?phone=62817811515&text=Halo%21%20saya%20ingin%20informasi%20Launching%20Perdana%20Ruko%20Gading%20Bulevar%20Summarecon%20Crown%20Gading%20'
-
   return (
     <div className="mx-auto relative">
       <Section1 />

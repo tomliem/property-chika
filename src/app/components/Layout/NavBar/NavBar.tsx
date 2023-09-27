@@ -5,8 +5,9 @@ import type { LinkProps } from 'next/link'
 import { usePathname } from 'next/navigation'
 
 const navbarItems = [
-  { ref: '/', label: 'Home' },
-  { ref: '/#projects', label: 'Projects' },
+  { ref: '/#home', label: 'Home' },
+  { ref: '/#floor-plan', label: 'Floor Plan' },
+  { ref: '/#site-plan', label: 'Site Plan' },
 ]
 
 const StyledNavLink = ({
@@ -36,11 +37,15 @@ export function NavBar() {
       >
         <ul className="flex items-center flex-row gap-10 md:gap-4 min-[900px]:gap-5 lg:gap-12 justify-center text-sm md:text-[15px] leading-[22px]">
           {navbarItems.map(({ ref, label }) => (
-            <li key={ref} className="relative text-base font-semibold">
+            <li key={ref} className="relative text-base font-semibold font-header">
               <StyledNavLink
                 isActive={ref === linkRef}
                 href={ref}
                 onClick={() => {
+                  const id = ref.split('#')
+
+                  const element = document.getElementById(id[1])
+                  if (element) element.scrollIntoView({ behavior: 'smooth' })
                   setLinkRef(ref)
                   setIsMenuShown(false)
                 }}

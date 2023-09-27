@@ -25,6 +25,9 @@ const config: Config = {
           '100%': { opacity: '1' },
         },
       },
+      fontFamily: {
+        'header': ['Segoe UI'],
+      },
       animation: {
         'fade-in': 'fade 3s ease-in-out',
       },
