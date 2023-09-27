@@ -16,6 +16,7 @@ const config: Config = {
         'blue-site': '#2859B6',
         'primary-blue': '#201867',
         'primary-dark-blue': '#0F0855',
+        'primary-gold-yellow': '#D7A866',
       },
       keyframes: {
         fade: {

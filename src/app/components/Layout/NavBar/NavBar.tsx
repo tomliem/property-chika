@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation'
 
 const navbarItems = [
   { ref: '/', label: 'Home' },
-  { ref: '/projects', label: 'Projects' },
+  { ref: '/#projects', label: 'Projects' },
 ]
 
 const StyledNavLink = ({
@@ -31,25 +31,10 @@ export function NavBar() {
   const toggleOpen = useCallback(() => setIsMenuShown(!isMenuShown), [isMenuShown])
   return (
     <>
-      <button className="block md:hidden float-right relative z-50" onClick={toggleOpen}>
-        <div className="space-y-2 absolute top-0 right-0 bg-purple-site p-3">
-          {(isMenuShown
-            ? ['rotate-45 translate-y-[13px]', 'opacity-0 h-0', '-rotate-45 translate-y-[-13px]']
-            : ['', '', '']
-          ).map((className, index) => (
-            <span
-              key={index}
-              className={'block h-[3px] w-6 bg-white transform transition duration-500 ease-in-out ' + className}
-            ></span>
-          ))}
-        </div>
-      </button>
       <nav
-        className={`${
-          isMenuShown ? 'max-md:w-full max-md:opacity-100' : 'max-md:w-0 max-md:opacity-0'
-        } transition-all duration-500 ease-in-out md:block overflow-hidden max-md:absolute max-md:animate-sideways-once max-md:h-screen max-md:bg-white max-md:pt-24 z-40 top-0 right-0`}
+        className={`transition-all duration-500 ease-in-out md:block overflow-hidden  max-md:animate-sideways-once `}
       >
-        <ul className="flex flex-col items-center md:flex-row gap-10 md:gap-4 min-[900px]:gap-5 lg:gap-12 justify-end text-sm md:text-[15px] leading-[22px]">
+        <ul className="flex items-center flex-row gap-10 md:gap-4 min-[900px]:gap-5 lg:gap-12 justify-center text-sm md:text-[15px] leading-[22px]">
           {navbarItems.map(({ ref, label }) => (
             <li key={ref} className="relative text-base font-semibold">
               <StyledNavLink

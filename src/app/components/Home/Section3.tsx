@@ -1,26 +1,51 @@
 'use client'
 import Image from 'next/image'
-import BGImage from '@statics/banner-master-plan.png'
+import BGImage from '@statics/1.jpg'
 import Viewer from 'react-viewer'
 import { useState } from 'react'
 
 export const Section3 = () => {
   const [visible, setVisible] = useState(false)
   return (
-    <div className="text-xl mt-10">
-      <div className="text-center text-3xl font-bold">Best Business Property in BEKASI</div>
+    <div className="text-xl">
+      <p className="text-primary-gold-yellow font-bold px-4 sm:px-12 font-sans bg-primary-blue py-2 text-center mx-auto text-base md:text-2xl">
+        Crystal Boulevard merupakan area komersial yang terdekat dari Flyover K.H. Noer Ali sebagai akses utama menuju
+        Summarecon Bekasi. Juga berada terdepan di area Landmark serta dekat Summarecon Mall Bekasi.
+      </p>
+      <h1 className="text-center text-3xl font-bold mt-5">Best Business Property in BEKASI</h1>
       <div className="w-full mt-5">
         <Image src={BGImage} alt="P" className="w-full" />
 
         <div className="grid grid-cols-3">
           <div className="col-span-1">
-            <Image onClick={() => setVisible(true)} src="/sample-3.jpg" alt="Image Title" width={300} height={300} className="w-full" />
+            <Image
+              onClick={() => setVisible(true)}
+              src="/2.jpg"
+              alt="Image Title"
+              width={300}
+              height={300}
+              className="w-full"
+            />
           </div>
           <div className="col-span-1">
-            <Image onClick={() => setVisible(true)} src="/sample-3.jpg" alt="Image Title" width={300} height={300} className="w-full" />
+            <Image
+              onClick={() => setVisible(true)}
+              src="/3.jpg"
+              alt="Image Title"
+              width={300}
+              height={300}
+              className="w-full"
+            />
           </div>
           <div className="col-span-1">
-            <Image onClick={() => setVisible(true)} src="/sample-3.jpg" alt="Image Title" width={300} height={300} className="w-full" />
+            <Image
+              onClick={() => setVisible(true)}
+              src="/4.jpg"
+              alt="Image Title"
+              width={300}
+              height={300}
+              className="w-full"
+            />
           </div>
         </div>
       </div>
@@ -30,7 +55,11 @@ export const Section3 = () => {
           setVisible(false)
         }}
         noNavbar
-        images={[{ src: `/sample-3.jpg`, alt: '' }, { src: `/sample-3.jpg`, alt: '' }, { src: `/sample-3.jpg`, alt: '' }]}
+        images={[
+          { src: `/2.jpg`, alt: '' },
+          { src: `/3.jpg`, alt: '' },
+          { src: `/4.jpg`, alt: '' },
+        ]}
       />
     </div>
   )

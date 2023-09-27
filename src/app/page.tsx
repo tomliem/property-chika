@@ -14,11 +14,11 @@ export default function Home() {
       <Section3 />
       <Section2 />
       <Section4 />
-      <div className="mt-10 flex bg-[url('/sample-2.jpeg')] bg-no-repeat bg-cover relative">
-        <div className="bg-opacity-70 bg-slate-500 w-full h-full absolute top-0 left-0 z-10"></div>
+      <div className="mt-10 flex  bg-no-repeat bg-cover relative">
+        <div className="bg-opacity-80 bg-primary-dark-blue w-full h-full absolute top-0 left-0 z-10"></div>
         <div className="py-10 w-full flex items-center flex-col z-20">
           <div className="mb-4 text-white font-bold text-xl">Info Harga dan Stok Unit Terupdate</div>
-          <a href={waUrl} className="rounded-sm px-4 py-2 bg-green-800 text-white">
+          <a href={waUrl} className="rounded-sm px-4 py-2 bg-green-800 hover:bg-green-900 transition-all text-white">
             Klik disini
           </a>
         </div>

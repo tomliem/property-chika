@@ -1,5 +1,5 @@
 import Image from "next/image"
-import MainBanner from '@statics/banner-utama.png'
+import MainBanner from '@statics/banner-utama.jpg'
 
 export const Section1 = () => {
   return (
