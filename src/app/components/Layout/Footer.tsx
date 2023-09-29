@@ -8,7 +8,9 @@ const Footer = () => (
   <footer className="m-h-56 leading-7 font-site">
     <div className="flex flex-col sm:flex-row">
       <div className="basis-1/3 bg-blue-site text-white p-7 sm:pl-24">
-        <h2 className="text-2xl sm:text-3xl font-bold">Remax Solitaire</h2>
+        <div className="mt-5 -ml-8">
+          <Image src={LogoImage} alt="Logo Remax" width={230} />
+        </div>
         <div className="flex flex-col sm:flex-row text-sm font-helvetica">
           <div className="border-b border-white pb-4">
             <p className="mt-5 font-bold">Agen Real Estate Pilihan Indonesia</p>
@@ -20,9 +22,6 @@ const Footer = () => (
             <p className="mt-1">Email: solitaire@remax.co.id</p>
             {/* <p className="mt-10">Registered Charity: 12345-67</p> */}
           </div>
-        </div>
-        <div className="mt-5 -ml-8">
-          <Image src={LogoImage} alt="Logo Remax" width={230} />
         </div>
         <h3 className="text-xl lg:text-xl mt-5">www.solitaire.remax.co.id</h3>
       </div>
