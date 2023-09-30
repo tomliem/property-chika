@@ -24,7 +24,7 @@ export const Section3New = () => {
             <Image src={arrayImages[activeIdx]} alt="P" className="w-full" width={1200} height={600} />
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 mt-2">
+          <div className="grid gap-2 grid-cols-2 md:grid-cols-3 mt-2">
             {arrayImages.map((x, idx) => {
               return (
                 <div className="col-span-1 cursor-pointer" onClick={() => setActiveIdx(idx)}>
