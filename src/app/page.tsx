@@ -1,15 +1,15 @@
 import Image from 'next/image'
 import { Section1 } from '@app/components/Home/Section1'
 import { Section2 } from '@app/components/Home/Section2'
-import { Section3 } from '@app/components/Home'
 import { Section4 } from './components/Home/Section4'
 import { waUrl } from './components/Whatsapp/Whatsapp'
+import { Section3New } from './components/Home/Section3New'
 
 export default function Home() {
   return (
     <div className="mx-auto relative">
       <Section1 />
-      <Section3 />
+      <Section3New />
       <Section2 />
       <Section4 />
       <div className="mt-10 flex  bg-no-repeat bg-cover relative">

@@ -21,9 +21,9 @@ const Footer = () => (
             <p className="mt-5">Phone: +62 214 515 551</p>
             <p className="mt-1">Email: solitaire@remax.co.id</p>
             {/* <p className="mt-10">Registered Charity: 12345-67</p> */}
+            <h3 className="text-xl lg:text-xl mt-5 font-semibold">www.solitaire.remax.co.id</h3>
           </div>
         </div>
-        <h3 className="text-xl lg:text-xl mt-5">www.solitaire.remax.co.id</h3>
       </div>
       <div className="basis-2/3 bg-gray-200 p-14 text-justify hidden lg:block font-sans">
         <p>
