@@ -24,10 +24,20 @@ export const Section3New = () => {
           <div className="transition-all relative">
             <Image src={arrayImages[activeIdx]} alt="P" className="w-full" width={1200} height={600} />
             <div className="absolute top-1/2 transform -translate-y-1/2 flex justify-between w-full px-2">
-              <div className="rounded-full bg-primary-dark-blue p-2 cursor-pointer">
+              <div
+                className="rounded-full bg-primary-dark-blue p-2 cursor-pointer"
+                onClick={() => {
+                  setActiveIdx((prevIdx) => (prevIdx - 1 + 6) % 6);
+                }}
+              >
                 <BsChevronLeft color="white" />
               </div>
-              <div className="rounded-full bg-primary-dark-blue p-2 cursor-pointer">
+              <div
+                className="rounded-full bg-primary-dark-blue p-2 cursor-pointer"
+                onClick={() => {
+                  setActiveIdx((prevIdx) => (prevIdx + 1) % 6)
+                }}
+              >
                 <BsChevronRight color="white" />
               </div>
             </div>
