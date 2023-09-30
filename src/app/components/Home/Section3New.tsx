@@ -8,9 +8,14 @@ import { BsChevronRight, BsChevronLeft } from 'react-icons/bs/'
 const arrayImages = ['/1.jpg', '/2.jpg', '/3.jpg', '/4.jpg', '/5.jpg', '/6.jpg']
 export const Section3New = () => {
   const [activeIdx, setActiveIdx] = useState(0)
+  const [pause, setPause] = useState(false)
   useInterval(() => {
-    setActiveIdx((prevIdx) => (prevIdx + 1) % 6)
+    if (!pause) setActiveIdx((prevIdx) => (prevIdx + 1) % 6)
   }, 3500)
+
+  useInterval(() => {
+    if (pause) setPause(false)
+  }, 8000)
 
   return (
     <>
@@ -28,6 +33,7 @@ export const Section3New = () => {
                 className="rounded-full bg-primary-dark-blue p-2 cursor-pointer"
                 onClick={() => {
                   setActiveIdx((prevIdx) => (prevIdx - 1 + 6) % 6);
+                  setPause(true)
                 }}
               >
                 <BsChevronLeft color="white" />
@@ -36,6 +42,7 @@ export const Section3New = () => {
                 className="rounded-full bg-primary-dark-blue p-2 cursor-pointer"
                 onClick={() => {
                   setActiveIdx((prevIdx) => (prevIdx + 1) % 6)
+                  setPause(true)
                 }}
               >
                 <BsChevronRight color="white" />
@@ -46,7 +53,10 @@ export const Section3New = () => {
           <div className="grid gap-2 grid-cols-2 md:grid-cols-3 mt-2">
             {arrayImages.map((x, idx) => {
               return (
-                <div className="col-span-1 cursor-pointer" onClick={() => setActiveIdx(idx)}>
+                <div className="col-span-1 cursor-pointer" onClick={() => {
+                  setActiveIdx(idx)
+                  setPause(true)
+                }}>
                   <Image src={x} alt="Image Title" width={300} height={300} className="w-full" />
                 </div>
               )
