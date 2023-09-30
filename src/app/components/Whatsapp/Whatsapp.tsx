@@ -7,7 +7,9 @@ const Whatsapp = () => {
   return (
     <div className="fixed bottom-4 right-4 z-30">
       <a href={waUrl} className="items-center flex flex-row cursor-pointer">
-        <div className="text-white text-lg py-1 px-2 bg-[#25D366] border-white border-y-4 border-l-4">Remax Solitaire Ratinah</div>
+        <div className="text-white  py-1 px-2 bg-[#25D366] border-white border-y-4 border-l-4">
+          <div className="text-base font-normal font-sans">Remax Solitaire (Ratina)</div>
+        </div>
         <div className="bg-white rounded-lg">
           <FaWhatsappSquare size={80} color="#25D366" />
         </div>
