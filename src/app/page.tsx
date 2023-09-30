@@ -1,9 +1,7 @@
 import Image from 'next/image'
 import { Section1 } from '@app/components/Home/Section1'
-import { Section2 } from '@app/components/Home/Section2'
-import { Section4 } from './components/Home/Section4'
+import { Section2, Section3New, Section4 } from '@app/components/Home'
 import { waUrl } from './components/Whatsapp/Whatsapp'
-import { Section3New } from './components/Home/Section3New'
 
 export default function Home() {
   return (
