@@ -3,12 +3,13 @@ import Image from 'next/image'
 import Viewer from 'react-viewer'
 import { useState } from 'react'
 import { useInterval } from 'react-use'
+import { BsChevronRight, BsChevronLeft } from 'react-icons/bs/'
 
 const arrayImages = ['/1.jpg', '/2.jpg', '/3.jpg', '/4.jpg', '/5.jpg', '/6.jpg']
 export const Section3New = () => {
   const [activeIdx, setActiveIdx] = useState(0)
   useInterval(() => {
-    setActiveIdx(prevIdx => (prevIdx + 1) % 6)
+    setActiveIdx((prevIdx) => (prevIdx + 1) % 6)
   }, 3500)
 
   return (
@@ -20,8 +21,16 @@ export const Section3New = () => {
       <div className="text-xl max-w-6xl mx-auto">
         <h1 className="text-center text-2xl font-bold mt-5 font-header">Best Business Property in BEKASI</h1>
         <div className="w-full mt-5">
-          <div className="transition-all">
+          <div className="transition-all relative">
             <Image src={arrayImages[activeIdx]} alt="P" className="w-full" width={1200} height={600} />
+            <div className="absolute top-1/2 transform -translate-y-1/2 flex justify-between w-full px-2">
+              <div className="rounded-full bg-primary-dark-blue p-2 cursor-pointer">
+                <BsChevronLeft color="white" />
+              </div>
+              <div className="rounded-full bg-primary-dark-blue p-2 cursor-pointer">
+                <BsChevronRight color="white" />
+              </div>
+            </div>
           </div>
 
           <div className="grid gap-2 grid-cols-2 md:grid-cols-3 mt-2">

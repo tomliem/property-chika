@@ -1,3 +1,4 @@
+'use client'
 import Image from 'next/image'
 import BGImage from '@statics/sample-1.jpeg'
 import { useState } from 'react'
@@ -7,7 +8,11 @@ export const Section2 = () => {
   const [visible, setVisible] = useState(false)
   return (
     <div className="text-xl mt-10 max-w-6xl mx-auto" id="floor-plan">
-      <div className="text-center font-bold text-2xl font-header">FLOOR PLAN DESIGN</div>
+      <div className="flex space-x-2 items-center">
+        <div className="h-[2px] w-full bg-primary-dark-blue"></div>
+        <div className="text-center font-bold text-2xl font-header whitespace-nowrap">FLOOR PLAN DESIGN</div>
+        <div className="h-[2px] w-full bg-primary-dark-blue"></div>
+      </div>
       <div className="grid grid-cols-1 sm:grid-cols-3 px-5 sm:px-24 mt-5 gap-5">
         <div className="col-span-1 mx-auto">
           <div className="font-bold text-primary-gold-yellow mb-2">1. Facade</div>
