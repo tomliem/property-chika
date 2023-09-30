@@ -13,7 +13,6 @@ const Footer = () => (
         </div>
         <div className="flex flex-col sm:flex-row text-sm font-helvetica">
           <div className="border-b border-white pb-4">
-            <p className="mt-5 font-bold">Agen Real Estate Pilihan Indonesia</p>
             <p className="mt-5">
               Jl. Kelapa Nias Raya QE1/14 <br />
               Kelapa Gading Jakarta Utara - 14240 Indonesia
