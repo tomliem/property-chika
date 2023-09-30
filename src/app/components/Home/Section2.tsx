@@ -1,7 +1,10 @@
 import Image from 'next/image'
 import BGImage from '@statics/sample-1.jpeg'
+import { useState } from 'react'
+import Viewer from 'react-viewer'
 
 export const Section2 = () => {
+  const [visible, setVisible] = useState(false)
   return (
     <div className="text-xl mt-10 max-w-6xl mx-auto" id="floor-plan">
       <div className="text-center font-bold text-2xl font-header">FLOOR PLAN DESIGN</div>
@@ -22,6 +25,19 @@ export const Section2 = () => {
           <Image src="/floor-hoek-s.jpg" alt="P" width={300} height={620} />
           
         </div>
+
+        <Viewer
+          visible={visible}
+          onClose={() => {
+            setVisible(false)
+          }}
+          noNavbar
+          images={[
+            { src: `/floor.jpg`, alt: '' },
+            { src: `/floor-s.jpg`, alt: '' },
+            { src: `/floor-hoek-s.jpg`, alt: '' },
+          ]}
+        />
       </div>
     </div>
   )
