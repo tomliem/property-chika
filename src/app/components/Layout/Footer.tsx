@@ -5,11 +5,15 @@ import LogoImage from '@statics/202332.png'
 import Image from 'next/image'
 
 const Footer = () => (
-  <footer className="m-h-56 leading-7 font-site">
+  <footer className="m-h-56 leading-7 font-site ">
     <div className="flex flex-col sm:flex-row">
-      <div className="basis-1/3 bg-blue-site text-white p-7 sm:pl-24">
+      <div className="basis-1/3 bg-blue-site text-white p-7 sm:pl-24 pb-12">
         <div className="mt-5 -ml-8">
           <Image src={LogoImage} alt="Logo Remax" width={230} />
+        </div>
+        <div className="flex flex-col text-sm font-helvetica mt-4">
+          <div className="font-semibold">Ratina</div>
+          <div>Official Marketing Partnet of Summarecon Bekasi</div>
         </div>
         <div className="flex flex-col sm:flex-row text-sm font-helvetica">
           <div className="border-b border-white pb-4">
