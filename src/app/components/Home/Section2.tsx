@@ -15,18 +15,18 @@ export const Section2 = () => {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 px-5 lg:px-24 mt-5 gap-5">
         <div className="col-span-1 mx-auto">
-          <div className="font-bold text-primary-gold-yellow mb-2">1. Facade <span className="invisible">asdasdasdasdasd</span></div>
+          <div className="font-bold text-primary-gold-yellow mb-2 text-base">1. Facade</div>
           <Image src='/floor.jpg' alt="P" width={300} height={620} onClick={() => setVisible(true)} />
           
         </div>
         <div className="col-span-1 mx-auto">
-          <div className="font-bold text-primary-gold-yellow mb-2">2. Facade Signature <span className="invisible">asdasdasdasdasd</span></div>
+          <div className="font-bold text-primary-gold-yellow mb-2 text-base">2. Facade Signature</div>
           <Image src="/floor-s.jpg" alt="P" width={300} height={620} onClick={() => setVisible(true)} />
           
         </div>
 
         <div className="col-span-1 mx-auto">
-          <div className="font-bold text-primary-gold-yellow mb-2">3. Facade Signature Hoek</div>
+          <div className="font-bold text-primary-gold-yellow mb-2 text-base">3. Facade Signature Hoek</div>
           <Image src="/floor-hoek-s.jpg" alt="P" width={300} height={620} onClick={() => setVisible(true)} />
           
         </div>
