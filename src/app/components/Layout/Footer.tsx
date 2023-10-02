@@ -7,7 +7,7 @@ import Image from 'next/image'
 const Footer = () => (
   <footer className="m-h-56 leading-7 font-site ">
     <div className="flex flex-col sm:flex-row">
-      <div className="basis-1/3 bg-blue-site text-white p-7 sm:pl-24 pb-12">
+      <div className="basis-full lg:basis-1/3 bg-blue-site text-white p-7 sm:pl-24 pb-12">
         <div className="mt-5 -ml-8">
           <Image src={LogoImage} alt="Logo Remax" width={230} />
         </div>
