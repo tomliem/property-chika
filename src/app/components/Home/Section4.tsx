@@ -15,7 +15,7 @@ export const Section4 = () => {
         <div className="h-[2px] w-full bg-primary-dark-blue"></div>
       </div>
       <div className="w-full mt-5">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-5xl mx-auto" onClick={() => setVisible(true)}>
           <Image src="/site-plan.jpg" alt="P" className="w-full" width={2289} height={1650} />
         </div>
       </div>
