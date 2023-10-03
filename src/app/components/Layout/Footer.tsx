@@ -3,8 +3,12 @@ import './footer.css'
 import { Whatsapp } from '@app/components/Whatsapp'
 import LogoImage from '@statics/202332.png'
 import Image from 'next/image'
+import { email, phone, waUrl } from 'src/constants/agent'
 
-const Footer = () => (
+type FooterProps = {
+  agent: keyof typeof waUrl
+}
+const Footer = ({ agent }: FooterProps) => (
   <footer className="m-h-56 leading-7 font-site ">
     <div className="flex flex-col sm:flex-row">
       <div className="basis-full lg:basis-1/3 bg-blue-site text-white p-7 sm:pl-24 pb-12">
@@ -12,19 +16,19 @@ const Footer = () => (
           <Image src={LogoImage} alt="Logo Remax" width={230} />
         </div>
         <div className="flex flex-col text-sm font-helvetica mt-4">
-          <div className="font-semibold">Ratina</div>
-          <div>Official Marketing Partnet of Summarecon Bekasi</div>
+          <div className="font-semibold capitalize">{agent}</div>
+          <div>Official Marketing Partner of Summarecon Bekasi</div>
         </div>
         <div className="flex flex-col sm:flex-row text-sm font-helvetica">
-          <div className="border-b border-white pb-4">
+          <div className="border-b border-white pb-4 flex flex-col w-full">
             <p className="mt-5">
               Jl. Kelapa Nias Raya QE1/14 <br />
-              Kelapa Gading Jakarta Utara - 14240 Indonesia
+              Kelapa Gading, Jakarta 14240
             </p>
-            <p className="mt-5">Phone: +62 214 515 551</p>
-            <p className="mt-1">Email: solitaire@remax.co.id</p>
+            <a href={`tel:+${phone[agent]}`} className="mt-5">Phone: +{phone[agent]}</a>
+            <a href={`mailto:${email[agent]}`} className="mt-1">Email: {email[agent]}</a>
             {/* <p className="mt-10">Registered Charity: 12345-67</p> */}
-            <h3 className="text-xl lg:text-xl mt-5 font-semibold">www.solitaire.remax.co.id</h3>
+            <a href="https://solitaire.remax.co.id" className="text-xl lg:text-xl mt-5 font-semibold">www.solitaire.remax.co.id</a>
           </div>
         </div>
       </div>

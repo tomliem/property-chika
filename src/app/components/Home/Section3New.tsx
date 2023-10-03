@@ -32,7 +32,7 @@ export const Section3New = () => {
               <div
                 className="rounded-full bg-primary-dark-blue p-2 cursor-pointer"
                 onClick={() => {
-                  setActiveIdx((prevIdx) => (prevIdx - 1 + 6) % 6);
+                  setActiveIdx((prevIdx) => (prevIdx - 1 + 6) % 6)
                   setPause(true)
                 }}
               >
@@ -53,10 +53,14 @@ export const Section3New = () => {
           <div className="grid gap-2 grid-cols-2 md:grid-cols-3 mt-2">
             {arrayImages.map((x, idx) => {
               return (
-                <div className="col-span-1 cursor-pointer" onClick={() => {
-                  setActiveIdx(idx)
-                  setPause(true)
-                }}>
+                <div
+                  className="col-span-1 cursor-pointer"
+                  key={idx}
+                  onClick={() => {
+                    setActiveIdx(idx)
+                    setPause(true)
+                  }}
+                >
                   <Image src={x} alt="Image Title" width={300} height={300} className="w-full" />
                 </div>
               )

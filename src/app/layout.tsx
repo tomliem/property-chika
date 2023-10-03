@@ -3,6 +3,8 @@ import type { Metadata } from 'next'
 import Footer from '@app/components/Layout/Footer'
 import Header from '@app/components/Layout/Header'
 import { Inter } from 'next/font/google'
+import { useRouter } from 'next/navigation'
+import { waUrl } from 'src/constants/agent'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -12,6 +14,7 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const agent = (children as any)?.props?.childProp.segment as keyof typeof  waUrl;
   return (
     <html lang="en">
       <head>
@@ -23,7 +26,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         <main className="bg-white min-h-[600px]">{children}</main>
         <div className="mt-10 sm:mt-20">
-          <Footer />
+          <Footer agent={agent} />
         </div>
       </body>
     </html>
