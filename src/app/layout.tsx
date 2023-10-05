@@ -14,7 +14,8 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  const agent = (children as any)?.props?.childProp.segment as keyof typeof  waUrl;
+  const agent = (children as any)?.props?.childProp.segment;
+  console.log(agent)
   return (
     <html lang="en">
       <head>
@@ -26,7 +27,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         <main className="bg-white min-h-[600px]">{children}</main>
         <div className="mt-10 sm:mt-20">
-          <Footer agent={agent ?? 'ratina'} />
+          <Footer agent={agent === '__PAGE__' ? 'ratina' : agent} />
         </div>
       </body>
     </html>
