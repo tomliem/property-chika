@@ -2,7 +2,7 @@
 import { FaWhatsappSquare } from 'react-icons/fa'
 import { waUrl } from 'src/constants/agent'
 
-type WhatsappProps = {
+export type WhatsappProps = {
   agent: keyof typeof waUrl
 }
 const Whatsapp = ({ agent }: WhatsappProps) => {
