@@ -28,6 +28,7 @@ const StyledNavLink = ({
 export function NavBar() {
   const [isMenuShown, setIsMenuShown] = useState(false)
   const pathname = usePathname()
+  console.log(pathname)
   const [linkRef, setLinkRef] = useState<LinkProps['href']>(pathname!)
   const toggleOpen = useCallback(() => setIsMenuShown(!isMenuShown), [isMenuShown])
   return (
@@ -40,7 +41,7 @@ export function NavBar() {
             <li key={ref} className="relative text-base font-semibold font-header">
               <StyledNavLink
                 isActive={ref === linkRef}
-                href={ref}
+                href={`${pathname}${ref}`}
                 onClick={() => {
                   const id = ref.split('#')
 
