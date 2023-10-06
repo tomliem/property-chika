@@ -22,6 +22,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <title>Summarecon Bekasi Crystal Boulevard</title>
         <meta name="description" content="Properti Bekasi, Cuan Property" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="google-site-verification" content="kogJ_n0FfriIl6H16c5NRiqNSPvCZuLTSmto9WXrd_o" />
       </head>
       <body className="text-blue-site bg-white">
         <Header />
