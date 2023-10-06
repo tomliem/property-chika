@@ -34,6 +34,9 @@ const nextConfig = {
     ].filter(Boolean)
   },
   webpack(config, { isServer }) {
+    // if (isServer) {
+    //   require("./scripts/sitemap-generator");
+    // }
     config.module.rules.push({
       test: /\.svg$/i,
       issuer: /\.[jt]sx?$/,
