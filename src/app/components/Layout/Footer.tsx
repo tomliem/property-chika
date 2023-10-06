@@ -28,7 +28,7 @@ const Footer = ({ agent }: FooterProps) => (
             <a href={`tel:+${phone[agent]}`} className="mt-5">Phone: +{phone[agent]}</a>
             <a href={`mailto:${email[agent]}`} className="mt-1">Email: {email[agent]}</a>
             {/* <p className="mt-10">Registered Charity: 12345-67</p> */}
-            <a href="https://solitaire.remax.co.id" className="text-xl lg:text-xl mt-5 font-semibold">solitaire.remax.co.id</a>
+            {/* <a href="https://solitaire.remax.co.id" className="text-xl lg:text-xl mt-5 font-semibold">solitaire.remax.co.id</a> */}
           </div>
         </div>
       </div>
